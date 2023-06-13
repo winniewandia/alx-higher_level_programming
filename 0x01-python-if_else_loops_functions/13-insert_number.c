@@ -1,4 +1,5 @@
 #include "lists.h"
+#include <stdlib.h>
 /**
  * insert_node - inserts a node in alist
  * @head: Address of next node
