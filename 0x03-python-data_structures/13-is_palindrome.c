@@ -59,7 +59,7 @@ int is_palindrome(listint_t **head)
     listint_t *second_half;
     int is_palindrome;
 
-    if (*head == NULL)
+    if (*head == NULL || (*head)->next == NULL)
         return (1);
     while (fast != NULL && fast->next != NULL)
     {
