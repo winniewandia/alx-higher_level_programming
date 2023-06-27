@@ -40,7 +40,8 @@ class Square:
     def position(self):
         """This method gets the position property.
         The setter method below sets the value of position
-        depending on whether its a tuple of 2 int"""
+        depending on whether its a tuple of 2 int
+        """
         return self.__position
 
     @position.setter
