@@ -1,4 +1,5 @@
 #!/usr/bin/python3
 class Square:
-    """This creates a square with 4 equal sides"""
+    """Class Square that defines a square with 4 equal sides
+    """
     pass
