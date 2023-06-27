@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-"""This class creates a square
+"""This is a module called 0-square.
+
+This module contains a class Square
 """
 
 
