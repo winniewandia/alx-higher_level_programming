@@ -13,6 +13,9 @@ class Square:
 
     def __init__(self, size=0, position=(0, 0)):
         """This initializes the size of the square
+        Args:
+        size(int): The size of the square
+        position(int): Position of the square
         Attributes:
         size(int): The size of the square
         position(int): Position of the square
@@ -41,7 +44,8 @@ class Square:
     def position(self):
         """This method gets the position property.
         The setter method below sets the value of position
-        depending on whether its a tuple of 2 positive integers
+        depending on whether its a tuple
+        of 2 positive integers
         """
         return self.__position
 
