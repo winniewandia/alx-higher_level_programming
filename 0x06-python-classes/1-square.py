@@ -1,4 +1,11 @@
 #!/usr/bin/python3
+"""This is a module called 1-square.
+
+The module contains a class Square that contains a
+private attribute size
+"""
+
+
 class Square:
     """The class Square defines a square.
     """
