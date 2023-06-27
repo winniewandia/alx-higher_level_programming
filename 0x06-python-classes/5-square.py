@@ -45,11 +45,10 @@ class Square:
         """This method prints the square to stdout
         using # for each size
         """
-        for i in range(self.__size):
-            for j in range(self.__size):
-                if self.__size == 0:
-                    pass
-                else:
-                    print("{}".format("#"), end='')
+        if not self.__size:
             print()
-        print()
+        else:
+            for i in range(self.__size):
+                for j in range(self.__size):
+                    print("{}".format("#"), end='')
+                print()
