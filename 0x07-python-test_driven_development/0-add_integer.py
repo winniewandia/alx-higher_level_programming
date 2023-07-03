@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-"""This module defines a function that adds 2 integers.
+"""This module is called 0-add_integer.
+It defines a function that adds 2 integers.
 """
 
 
