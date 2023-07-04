@@ -25,16 +25,16 @@ def matrix_divided(matrix, div):
         and rounded of to 2 d.p.
     """
     if not matrix or not isinstance(matrix, list):
-        for sublist in matrix:
-            if not isinstance(sublist, list):
-                for element in sublist:
-                    if not isinstance(element, (float, int)):
-                        raise TypeError(
-                            'matrix must be a matrix (list of lists) \
-                                of integers/floats')
-    row_size = len(matrix[0])
-    if not all(len(row) == row_size for row in matrix):
-        raise TypeError('Each row of the matrix must have the same size')
+        raise TypeError('matrix must be a matrix (list of lists) of integers/floats')
+    for row in matrix:
+        if not row or not isinstance(row, list):
+            raise TypeError('matrix must be a matrix (list of lists) of integers/floats')
+        length = len(matrix[0])
+        if length != 0 and len(row) != length:
+            raise TypeError('Each row of the matrix must have the same size')
+        for digit in row:
+            if not isinstance(digit, (int, float)):
+                raise TypeError('matrix must be a matrix (list of lists) of integers/floats')
     if not isinstance(div, (int, float)):
         raise TypeError('div must be a number')
     if div == 0:

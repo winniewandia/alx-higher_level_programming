@@ -38,10 +38,10 @@ Dividing by 0
     ZeroDivisionError: division by zero
 
 Matrix is empty
-    >>> matrix_divided([[1, 2], []], 2) #doctest: +ELLIPSIS
+    >>> matrix_divided([], 2) #doctest: +ELLIPSIS
     Traceback (most recent call last):
     ...
-    TypeError: Each row of the matrix must have the same size
+    TypeError: matrix must be a matrix (list of lists) of integers/floats
 
 Tuple passed in matrix
     >>> matrix_divided((1, 2, 3), 2) #doctest: +ELLIPSIS
@@ -56,13 +56,13 @@ String passed in matrix
     TypeError: matrix must be a matrix (list of lists) of integers/floats
 
 Matrix with mixture of string and list
-    >>> matrix_divided([['1'], [2]], 7) #doctest: +ELLIPSIS
+    >>> matrix_divided([['1'], [2]], 7)
     Traceback (most recent call last):
     ...
     TypeError: matrix must be a matrix (list of lists) of integers/floats
 
 Matrix with unequal rows
-    >>> matrix_divided([[1, 2, 3], [4], [5.1, 70]], 35) #doctest: +ELLIPSIS
+    >>> matrix_divided([[1, 2, 3], [4], [5.1, 70]], 35)
     Traceback (most recent call last):
     ...
     TypeError: Each row of the matrix must have the same size
