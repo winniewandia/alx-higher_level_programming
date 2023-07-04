@@ -3,6 +3,8 @@
 It defines a function that prints a first name and
 last name
 """
+
+
 def say_my_name(first_name, last_name=""):
     """say_my_name function prints the first and last name
     of a person.

@@ -7,7 +7,7 @@ Args:
 
 
 def add_integer(a, b=98):
-    """This function adds 2 integers or floats that are 
+    """This function adds 2 integers or floats that are
     first casted to integers, otherwise TypeError is raised.
     """
 
