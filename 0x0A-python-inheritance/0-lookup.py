@@ -12,6 +12,6 @@ def lookup(obj):
         obj (object): instance of the class
 
     Returns:
-        Returns a list object
+        a list object
     """
-    return dir(object)
+    return dir(obj)
