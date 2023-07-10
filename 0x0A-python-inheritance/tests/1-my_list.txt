@@ -1,7 +1,7 @@
 This library contains the ``my_list`` class
-that inherits from the list class
+that inherits the list class
 
-Importing the module:
+The module:
     >>> MyList = __import__('1-my_list').MyList
 
 Printing positive numbers
