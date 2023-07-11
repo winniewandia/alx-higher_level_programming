@@ -72,7 +72,9 @@ Passing float
     TypeError: <name> must be an integer
 
 Instatiation
-    >>> base = BaseGeometry
+    >>> base = BaseGeometry()
+    >>> isinstance(base, BaseGeometry)
+    True
 
 Passing tuple
     >>> base = BaseGeometry
