@@ -21,55 +21,55 @@ Passing 2 arguments to area
     TypeError: area() takes 1 positional argument but 3 were given
 
 Passing string and value
-    >>> base = BaseGeometry
+    >>> base = BaseGeometry()
     >>> base.integer_validator("name", 5)
 
 Passing string and string
-    >>> base = BaseGeometry
+    >>> base = BaseGeometry()
     >>> base.integer_validator("name", "5")
     Traceback (most recent call last):
     ...
-    TypeError: <name> must be an integer
+    TypeError: name must be an integer
 
 Passing string and negative value
-    >>> base = BaseGeometry
+    >>> base = BaseGeometry()
     >>> base.integer_validator("name", -5)
     Traceback (most recent call last):
     ...
-    ValueError: <name> must be greater than 0
+    ValueError: name must be greater than 0
 
 Passing one argument in integer_validator
-    >>> base = BaseGeometry
+    >>> base = BaseGeometry()
     >>> base.integer_validator("name")
     Traceback (most recent call last):
     ...
-    TypeError: integer_validator() takes 3 positional argument but 2 were given
+    TypeError: integer_validator() missing 1 required positional argument: 'value'
 
 Passing no argument
-    >>> base = BaseGeometry
+    >>> base = BaseGeometry()
     >>> base.integer_validator()
     Traceback (most recent call last):
     ...
-    TypeError: integer_validator() takes 3 positional argument but 1 was given
+    TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
 
 Available attributes and methods of an object
-    >>> base = BaseGeometry
+    >>> base = BaseGeometry()
     >>> print(dir(base))
     ['__class__', '__delattr__', '__dict__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getstate__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__le__', '__lt__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', 'area', 'integer_validator']
 
 Passing 0 for value
-    >>> base = BaseGeometry
+    >>> base = BaseGeometry()
     >>> base.integer_validator("name", 0)
     Traceback (most recent call last):
     ...
-    ValueError: <name> must be greater than 0
+    ValueError: name must be greater than 0
 
 Passing float
-    >>> base = BaseGeometry
+    >>> base = BaseGeometry()
     >>> base.integer_validator("name", 5.5)
     Traceback (most recent call last):
     ...
-    TypeError: <name> must be an integer
+    TypeError: name must be an integer
 
 Instatiation
     >>> base = BaseGeometry()
@@ -77,36 +77,36 @@ Instatiation
     True
 
 Passing tuple
-    >>> base = BaseGeometry
+    >>> base = BaseGeometry()
     >>> base.integer_validator("name", (5, 5))
     Traceback (most recent call last):
     ...
-    TypeError: <name> must be an integer
+    TypeError: name must be an integer
 
 Passing array
-    >>> base = BaseGeometry
+    >>> base = BaseGeometry()
     >>> base.integer_validator("name", [5, 6])
     Traceback (most recent call last):
     ...
-    TypeError: <name> must be an integer
+    TypeError: name must be an integer
 
 Passing dictionary
-    >>> base = BaseGeometry
+    >>> base = BaseGeometry()
     >>> base.integer_validator("name", {'age': 4, 'color': 'red'})
     Traceback (most recent call last):
     ...
-    TypeError: <name> must be an integer
+    TypeError: name must be an integer
 
 Passing Boolean
-    >>> base = BaseGeometry
+    >>> base = BaseGeometry()
     >>> base.integer_validator("name", True)
     Traceback (most recent call last):
     ...
-    TypeError: <name> must be an integer
+    TypeError: name must be an integer
 
 Passing None
-    >>> base = BaseGeometry
+    >>> base = BaseGeometry()
     >>> base.integer_validator("name", None)
     Traceback (most recent call last):
     ...
-    TypeError: <name> must be an integer
+    TypeError: name must be an integer
