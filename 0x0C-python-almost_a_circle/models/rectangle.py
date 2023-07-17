@@ -166,3 +166,10 @@ class Rectangle(Base):
         xy = "{}/{} - ".format(self.x, self.y)
         wh = "{}/{}".format(self.width, self.height)
         return rect + ids + xy + wh
+
+    def update(self, *args):
+        """assigns an argument to each attribute
+        """
+        list_attr = ["id", "width", "height", "x", "y"]
+        for i in range(len(args)):
+            setattr(self, list_attr[i], args[i])
