@@ -128,3 +128,21 @@ class TestRectangleMethods(unittest.TestCase):
         """
         with self.assertRaises(ValueError):
             new = Rectangle(1, 1, -2, -3, 1)
+
+    def test_area(self):
+        """Tests area of a rectangle
+        """
+        new = Rectangle(1, 2)
+        self.assertEqual(new.area(), 2)
+        new2 = Rectangle(3, 4)
+        self.assertEqual(new2.area(), 12)
+
+    def test_area2(self):
+        """Tests for area if height and width are modified
+        """
+        new = Rectangle(5, 6)
+        self.assertEqual(new.area(), 30)
+        new.width = 2
+        self.assertEqual(new.area(), 12)
+        new.height = 3
+        self.assertEqual(new.area(), 6)
