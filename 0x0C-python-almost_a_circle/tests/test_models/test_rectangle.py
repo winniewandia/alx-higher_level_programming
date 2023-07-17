@@ -4,6 +4,8 @@
 import unittest
 from models.base import Base
 from models.rectangle import Rectangle
+from io import StringIO
+from unittest.mock import patch
 
 
 class TestRectangleMethods(unittest.TestCase):
@@ -146,3 +148,27 @@ class TestRectangleMethods(unittest.TestCase):
         self.assertEqual(new.area(), 12)
         new.height = 3
         self.assertEqual(new.area(), 6)
+
+    def test_display(self):
+        """Test display
+        """
+        new = Rectangle(2, 3)
+        out = "##\n##\n##\n"
+        with patch('sys.stdout', io_out=StringIO()) as str:
+            new.display()
+            self.assertEqual(str.getvalue(), out)
+
+    def test_display_change(self):
+        """Test display with height changed
+        """
+        new = Rectangle(2, 3)
+        out = "##\n##\n##\n"
+        with patch('sys.stdout', io_out=StringIO()) as str:
+            new.display()
+            self.assertEqual(str.getvalue(), out)
+
+        new.height = 2
+        out = "##\n##\n"
+        with patch('sys.stdout', io_out=StringIO()) as str:
+            new.display()
+            self.assertEqual(str.getvalue(), out)
