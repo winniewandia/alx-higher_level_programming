@@ -151,3 +151,15 @@ class Rectangle(Base):
             for j in range(self.__width):
                 print("{}".format("#"), end='')
             print()
+
+    def __str__(self):
+        """Informal string representation
+
+        Returns:
+            str: string representation
+        """
+        rect = "[Rectangle] "
+        ids = "({}) ".format(self.id)
+        xy = "{}/{} - ".format(self.x, self.y)
+        wh = "{}/{}".format(self.width, self.height)
+        return rect + ids + xy + wh
