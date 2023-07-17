@@ -1,0 +1,136 @@
+#!/usr/bin/python3
+"""This module contains the Rectangle class thar
+inherits from Base class
+
+Returns:
+    int: the set attribute values
+"""
+from models.base import Base
+
+
+class Rectangle(Base):
+    """class Rectangle that inherits from Base.
+    Contains Private instance attributes, each with
+    its own public getter and setter
+
+    Args:
+        Base (class): The inherited class
+    """
+
+    def __init__(self, width, height, x=0, y=0, id=None):
+        """Initializes the width, height, x, y, id of each
+        instance
+
+        Args:
+            width (int): width of the Rectangle
+            height (int): height of the rectangle
+            x (int, optional):  Defaults to 0.
+            y (int, optional):  Defaults to 0.
+            id (int, optional): the id. Defaults to None.
+        """
+        self.width = width
+        self.height = height
+        self.x = x
+        self.y = y
+        super().__init__(id)
+
+    @property
+    def width(self):
+        """This method gets the width property
+
+        Returns:
+            int: the width
+        """
+        return self.__width
+
+    @width.setter
+    def width(self, value):
+        """This method sets the width value
+
+        Args:
+            value (int): the width of the rectangle
+
+        Raises:
+            TypeError: if width is not an int
+            ValueError: if width is <= 0
+        """
+        if type(value) is not int:
+            raise TypeError('width must be an integer')
+        if value <= 0:
+            raise ValueError('width must be > 0')
+        self.__width = value
+
+    @property
+    def height(self):
+        """This method gets the height value
+
+        Returns:
+            int: height of the rectangle
+        """
+        return self.__height
+
+    @height.setter
+    def height(self, value):
+        """This method sets the height value
+
+        Args:
+            value (int): height of the rectangle
+
+        Raises:
+            TypeError: if height is not an int
+            ValueError: if height is <= 0
+        """
+        if not isinstance(value, int):
+            raise TypeError('height must be an integer')
+        if value <= 0:
+            raise ValueError('height must be > 0')
+        self.__height = value
+
+    @property
+    def x(self):
+        """This method gets the x property
+
+        Returns:
+            int: x
+        """
+        return self.__x
+
+    @x.setter
+    def x(self, value):
+        """This method sets the x value
+
+        Args:
+            value (int): value of x
+
+        Raises:
+            TypeError: if x is not an int
+        """
+        if type(value) is not int:
+            raise TypeError('x must be an integer')
+        if value < 0:
+            raise ValueError('x must be >= 0')
+        self.__x = value
+
+    @property
+    def y(self):
+        """This method gets the y property
+
+        Returns:
+            int: y
+        """
+        return self.__y
+
+    @y.setter
+    def y(self, value):
+        """This method sets the y value
+
+        Args:
+            value (int): value of y
+        Raises:
+            TypeError: if y is not an int
+        """
+        if not isinstance(value, int):
+            raise TypeError('y must be an integer')
+        if value < 0:
+            raise ValueError('y must be >= 0')
+        self.__y = value
