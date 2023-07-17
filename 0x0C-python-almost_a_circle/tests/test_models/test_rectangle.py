@@ -177,7 +177,7 @@ class TestRectangleMethods(unittest.TestCase):
         """Tests str method print value
         """
         new = Rectangle(1, 2, 3, 4, 5)
-        out = "[Rectangle] (5) 3/4 - 1/2"
+        out = "[Rectangle] (5) 3/4 - 1/2\n"
         with patch('sys.stdout', io_out=StringIO()) as str:
             print(new)
             self.assertEqual(str.getvalue(), out)
@@ -185,5 +185,13 @@ class TestRectangleMethods(unittest.TestCase):
     def test_str_return(self):
         "Test str return value"
         new = Rectangle(1, 2, 3, 4, 5)
-        out = "[Rectangle] (5) 3/4 - 1/2"
+        out = "[Rectangle] (5) 3/4 - 1/2\n"
         self.assertEqual(new.__str__, out)
+
+    def test_display_xy(self):
+        """Test display considering x and y"""
+        r1 = Rectangle(2, 3, 2, 2)
+        out = "\n\n  ##\n  ##\n  ##\n"
+        with patch('sys.stdout', new=StringIO()) as str:
+            r1.display()
+            self.assertEqual(str.getvalue(), out)
