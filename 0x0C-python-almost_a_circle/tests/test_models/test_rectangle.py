@@ -239,3 +239,9 @@ class TestRectangleMethods(unittest.TestCase):
         with patch('sys.stdout', StringIO()) as mock_output:
             print(type(json_dictionary))
             self.assertEqual(mock_output.getvalue(), json_out)
+        dictionary = []
+        json_dictionary = Base.to_json_string([dictionary])
+        out = "[[]]\n"
+        with patch('sys.stdout', StringIO()) as mock_output:
+            print(json_dictionary)
+            self.assertEqual(mock_output.getvalue(), out)
