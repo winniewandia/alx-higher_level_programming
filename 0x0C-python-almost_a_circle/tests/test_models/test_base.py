@@ -2,8 +2,13 @@
 """This test module contains the class
     TestBaseMethods
 """
+from io import StringIO
+import os
 import unittest
+from unittest.mock import patch
 from models.base import Base
+from models.square import Square
+from models.rectangle import Rectangle
 
 
 class TestBaseMethods(unittest.TestCase):
@@ -56,3 +61,31 @@ class TestBaseMethods(unittest.TestCase):
         new = Base()
         with self.assertRaises(AttributeError):
             new.__nb_objects
+
+    def test_save_to_file(self):
+        """Tests json string representation written to file
+        """
+        Square.save_to_file(None)
+        out = "[]\n"
+        with open("Square.json", 'r', encoding="utf-8") as f:
+            with patch('sys.stdout', StringIO()) as mock_output:
+                print(f.read())
+                self.assertEqual(mock_output.getvalue(), out)
+
+        Square.save_to_file([])
+        with open("Square.json", 'r', encoding="utf-8") as f:
+            self.assertEqual(f.read(), "[]")
+
+    def test_save_to_file2(self):
+        """Tests json string representation written to file
+        """
+        Rectangle.save_to_file(None)
+        out = "[]\n"
+        with open("Rectangle.json", 'r', encoding="utf-8") as f:
+            with patch('sys.stdout', StringIO()) as mock_output:
+                print(f.read())
+                self.assertEqual(mock_output.getvalue(), out)
+
+        Rectangle.save_to_file([])
+        with open("Rectangle.json", 'r', encoding="utf-8") as f:
+            self.assertEqual(f.read(), "[]")
