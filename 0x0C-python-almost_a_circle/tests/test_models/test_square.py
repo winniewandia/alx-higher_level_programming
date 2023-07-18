@@ -95,3 +95,33 @@ class TestSquareMethods(unittest.TestCase):
         new = Square(1)
         with self.assertRaises(AttributeError):
             new.__y
+
+    def test_string_size(self):
+        """Passing size as string
+        """
+        with self.assertRaises(TypeError):
+            new = Square('1', 2, 3, 4)
+
+    def test_string_x(self):
+        """Passing x as string
+        """
+        with self.assertRaises(TypeError):
+            new = Square(1, '2', 3, 4)
+
+    def test_string_y(self):
+        """Passing y as string
+        """
+        with self.assertRaises(TypeError):
+            new = Square(1, 2, '3', 4)
+
+    def test_negative_size(self):
+        """Passing size as negative
+        """
+        with self.assertRaises(ValueError):
+            new = Square(-1, 2, 3, 4)
+
+    def test_zero_size(self):
+        """Passing size as 0
+        """
+        with self.assertRaises(ValueError):
+            new = Square(0, 2, 3, 4)
