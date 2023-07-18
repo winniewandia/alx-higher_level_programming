@@ -2,6 +2,7 @@
 """This module contains the class Base
 """
 import json
+import os
 
 
 class Base:
@@ -81,3 +82,22 @@ class Base:
             new = cls(10)
         new.update(**dictionary)
         return new
+
+    @classmethod
+    def load_from_file(cls):
+        """returns a list of instances
+
+        Returns:
+            list: list of instances
+        """
+        filename = "{}.json".format(cls.__name__)
+
+        if os.path.exists(filename) is False:
+            return []
+        with open(filename, 'r', encoding="utf-8") as f:
+            string = f.read()
+        string_load = cls.from_json_string(string)
+        my_list = []
+        for index in range(len(string_load)):
+            my_list.append(cls.create(**string_load[index]))
+        return my_list
