@@ -224,3 +224,18 @@ class TestRectangleMethods(unittest.TestCase):
         r1_dictionary = r1.to_dictionary()
         r2.update(**r1_dictionary)
         self.assertEqual(False, r1 == r2)
+
+    def test_dict_to_json(self):
+        """Test dictionary to JSON
+        """
+        r1 = Rectangle(10, 7, 2, 8)
+        dictionary = r1.to_dictionary()
+        json_dictionary = Base.to_json_string([dictionary])
+        dict_out = "<class 'dict'>\n"
+        with patch('sys.stdout', StringIO()) as mock_output:
+            print(type(dictionary))
+            self.assertEqual(mock_output.getvalue(), dict_out)
+        json_out = "<class 'str'>\n"
+        with patch('sys.stdout', StringIO()) as mock_output:
+            print(type(json_dictionary))
+            self.assertEqual(mock_output.getvalue(), json_out)
