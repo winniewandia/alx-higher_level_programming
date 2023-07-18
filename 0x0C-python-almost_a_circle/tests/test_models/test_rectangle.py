@@ -245,3 +245,23 @@ class TestRectangleMethods(unittest.TestCase):
         with patch('sys.stdout', StringIO()) as mock_output:
             print(json_dictionary)
             self.assertEqual(mock_output.getvalue(), out)
+
+    def test_create(self):
+        """test create method
+        """
+        r1 = Rectangle(3, 5, 1)
+        r1_dictionary = r1.to_dictionary()
+        r2 = Rectangle.create(**r1_dictionary)
+        self.assertEqual(False, r1 is r2)
+        self.assertEqual(False, r1 == r2)
+
+    def test_create2(self):
+        """test create method
+        """
+        dictionary = {'id': 4, 'width': 1, 'height': 2, 'x': 3, 'y': 4}
+        r1 = Rectangle.create(**dictionary)
+        self.assertEqual(r1.id, 4)
+        self.assertEqual(r1.width, 1)
+        self.assertEqual(r1.height, 2)
+        self.assertEqual(r1.x, 3)
+        self.assertEqual(r1.y, 4)
