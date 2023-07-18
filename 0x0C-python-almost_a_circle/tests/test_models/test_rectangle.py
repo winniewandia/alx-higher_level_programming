@@ -217,6 +217,8 @@ class TestRectangleMethods(unittest.TestCase):
             self.assertEqual(mock_output.getvalue(), out)
 
     def test_dict2(self):
+        """Test if 2 rectangles are equal after update
+        """
         r2 = Rectangle(1, 1)
         r1 = Rectangle(2, 2)
         r1_dictionary = r1.to_dictionary()
