@@ -1,7 +1,9 @@
 #!/usr/bin/python3
 """This module contains the class TestSquareMethods
 """
+from io import StringIO
 import unittest
+from unittest.mock import patch
 from models.square import Square
 from models.rectangle import Rectangle
 from models.base import Base
@@ -125,3 +127,17 @@ class TestSquareMethods(unittest.TestCase):
         """
         with self.assertRaises(ValueError):
             new = Square(0, 2, 3, 4)
+
+    def test_square_dict(self):
+        """Test for dictionary representation of Square
+        """
+        s1 = Square(10, 2, 1)
+        s1_dictionary = s1.to_dictionary()
+        out = "<class 'dict'>\n"
+        with patch('sys.stdout', StringIO()) as mock_output:
+            print(type(s1_dictionary))
+            self.assertEqual(mock_output.getvalue(), out)
+
+        s2 = Square(1, 1)
+        s2.update(**s1_dictionary)
+        self.assertEqual(False, s1 == s2)
