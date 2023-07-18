@@ -20,7 +20,7 @@ class Square(Rectangle):
             y (int, optional): Defaults to 0.
             id (_type_, optional): Defaults to None.
         """
-        super().__init__(size, size, id, x, y)
+        super().__init__(size, size, x, y, id)
 
     def __str__(self):
         """Informal string representation
@@ -31,7 +31,7 @@ class Square(Rectangle):
         rect = "[Square] "
         ids = "({}) ".format(self.id)
         xy = "{}/{} - ".format(self.x, self.y)
-        wh = "{}/{}".format(self.width, self.height)
+        wh = "{}".format(self.size)
         return rect + ids + xy + wh
 
     @property
@@ -43,8 +43,8 @@ class Square(Rectangle):
         """
         return self.width
 
-    @width.setter
-    def width(self, value):
+    @size.setter
+    def size(self, value):
         """This method sets the width value
 
         Args:
