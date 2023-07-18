@@ -52,3 +52,12 @@ class Square(Rectangle):
         """
         self.width = value
         self.height = value
+
+    def update(self, *args, **kwargs):
+        if args is not None and len(args) is not 0:
+            my_list = ['id', 'size', 'x', 'y']
+            for i in range(len(args)):
+                setattr(self, my_list[i], args[i])
+        else:
+            for key, value in kwargs.items():
+                setattr(self, key, value)
