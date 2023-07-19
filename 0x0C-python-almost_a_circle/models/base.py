@@ -101,3 +101,32 @@ class Base:
         for index in range(len(string_load)):
             my_list.append(cls.create(**string_load[index]))
         return my_list
+
+    @staticmethod
+    def draw(list_rectangles, list_squares):
+        screen = turtle.Screen()
+        screen.setup(800, 600)
+        screen.title("Rectangles and Squares")
+
+        t = turtle.Turtle()
+
+        def draw_rectangle(rectangle):
+            for _ in range(2):
+                t.forward(rectangle.width)
+                t.left(90)
+                t.forward(rectangle.height)
+                t.left(90)
+
+        def draw_square(square):
+            for _ in range(4):
+                t.forward(square.width)
+                t.left(90)
+
+        for rectangle in list_rectangles:
+            draw_rectangle(rectangle)
+
+        for square in list_squares:
+            draw_square(square)
+
+        t.hideturtle()
+        turtle.done()
