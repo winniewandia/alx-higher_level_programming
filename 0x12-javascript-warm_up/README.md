@@ -8,3 +8,4 @@
 7. Print argument a given number of times
 8. Prints a square
 9. function that adds 2 integers
+10. computes factorial recursively
