@@ -6,3 +6,4 @@
 5. print argument if it can be converted to a number
 6. loop in an array
 7. Print argument a given number of times
+8. Prints a square
