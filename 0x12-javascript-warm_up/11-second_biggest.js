@@ -12,7 +12,7 @@ if (len === 2 || len === 3) {
   }
   let secondMax = firstArg;
   for (let i = 0; i < len - 2; i++) {
-    if (process.argv[i + 2] < process.argv[i + 3] && process.argv[i + 3] < max) {
+    if (secondMax < process.argv[i + 3] && process.argv[i + 3] < max) {
       secondMax = process.argv[i + 3];
     }
   }
