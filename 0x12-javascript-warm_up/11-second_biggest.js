@@ -11,15 +11,13 @@ if (len <= 3) {
     }
   }
   let secondMax = args[0];
-  if (secondMax >= max)
-    {
-      secondMax = args[1]
-    }
+  if (secondMax >= max) {
+    secondMax = args[1];
+  }
   for (let i = 1; i < args.length; i++) {
     if (secondMax < args[i] && args[i] < max) {
       secondMax = args[i];
     }
   }
   console.log(secondMax);
-  console.log(max);
 }
