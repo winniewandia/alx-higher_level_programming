@@ -11,3 +11,4 @@
 10. computes factorial recursively
 11. script that searches the second biggest integer in the list of arguments
 12. updating value of an object
+13. export function using module.exports.functionName = functionName
