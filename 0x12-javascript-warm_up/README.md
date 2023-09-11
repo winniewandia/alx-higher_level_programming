@@ -7,3 +7,4 @@
 6. loop in an array
 7. Print argument a given number of times
 8. Prints a square
+9. function that adds 2 integers
