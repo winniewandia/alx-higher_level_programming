@@ -4,3 +4,4 @@
 3. printing value of process.argv
 4. concating a sentence
 5. print argument if it can be converted to a number
+6. loop in an array
