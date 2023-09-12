@@ -3,3 +3,4 @@
 2. Added a check to the constructor to check if w and h are positive non-zero integers
 3. Created an instance method called print() that prints the rectangle using the character X
 4. Created instance methods double and rotate
+5. Created a class Square that defines a square and inherits from Rectangle
