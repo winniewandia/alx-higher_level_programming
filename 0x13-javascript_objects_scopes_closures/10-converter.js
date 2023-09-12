@@ -1,4 +1,4 @@
-#!/opt/homebrew/bin/node
+#!/usr/bin/node
 exports.converter = function (base) {
   return function convertToBase10 (number) {
     if (number < base) {
