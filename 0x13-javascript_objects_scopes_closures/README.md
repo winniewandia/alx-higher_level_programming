@@ -4,3 +4,4 @@
 3. Created an instance method called print() that prints the rectangle using the character X
 4. Created instance methods double and rotate
 5. Created a class Square that defines a square and inherits from Rectangle
+6. Created an instance method called charPrint(c) that prints the rectangle using the character c
