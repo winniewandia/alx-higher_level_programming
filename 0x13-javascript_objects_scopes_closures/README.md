@@ -9,3 +9,4 @@
 8. function that returns the reversed version of a list
 9. function that prints the number of arguments already printed and the new argument value
 10. function that converts a number from base 10 to another base passed as argument
+11. a script that imports an array and computes a new array
