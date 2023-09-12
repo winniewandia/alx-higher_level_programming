@@ -8,3 +8,4 @@
 7. function that returns the number of occurrences in a list
 8. function that returns the reversed version of a list
 9. function that prints the number of arguments already printed and the new argument value
+10. function that converts a number from base 10 to another base passed as argument
