@@ -13,3 +13,4 @@
 12. updating value of an object
 13. export function using module.exports.functionName = functionName
 14. Changed the value of a variable
+15. a function that executes x times a function
