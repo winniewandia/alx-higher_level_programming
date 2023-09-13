@@ -12,3 +12,4 @@
 11. script that searches the second biggest integer in the list of arguments
 12. updating value of an object
 13. export function using module.exports.functionName = functionName
+14. Changed the value of a variable
