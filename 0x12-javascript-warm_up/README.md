@@ -15,3 +15,4 @@
 14. Changed the value of a variable
 15. a function that executes x times a function
 16. a function that increments and calls a function
+17. Added a new method to an object
