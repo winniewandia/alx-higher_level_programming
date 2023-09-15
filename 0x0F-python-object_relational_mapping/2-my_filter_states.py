@@ -5,20 +5,17 @@ the states table of hbtn_0e_0_usa where name matches the argument
 import MySQLdb
 import sys
 if __name__ == '__main__':
-    statename = sys.argv[4]
-    username = sys.argv[1]
-    passwod = sys.argv[2]
-    mydb = sys.argv[3]
     conn = MySQLdb.connect(
         host="localhost",
         port=3306,
-        user=username,
-        password=passwod,
-        db=mydb
+        user=sys.argv[1],
+        password=sys.argv[2],
+        db=sys.argv[3]
     )
     cur = conn.cursor()
-    query = "SELECT * FROM states WHERE name = %s ORDER BY id;"
-    cur.execute(query, statename)
+    query = "SELECT * FROM states WHERE name = '{}' ORDER BY \
+        id;.format(sys.argv[4])"
+    cur.execute(query)
     query_rows = cur.fetchall()
     for row in query_rows:
         print(row)
