@@ -1,9 +1,10 @@
-#!/Users/winniewandia/Workspace/alx-higher_level_programming/0x0F-python-object_relational_mapping/venv/bin/python
+#!/usr/bin/python3
 """This module contains the class definition of a State
 """
-from sqlalchemy import Column, Integer, String
+from sqlalchemy import Column, Integer, String, MetaData
 from sqlalchemy.ext.declarative import declarative_base
 
+# meta = MetaData()
 Base = declarative_base()
 
 
