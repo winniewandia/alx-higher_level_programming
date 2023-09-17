@@ -1,4 +1,4 @@
-#!/Users/winniewandia/Workspace/alx-higher_level_programming/0x0F-python-object_relational_mapping/venv/bin/python
+#!/usr/bin/python3
 """a script that changes the name of a State object from
 the database hbtn_0e_6_usa
 """
