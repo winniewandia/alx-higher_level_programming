@@ -13,3 +13,4 @@
 11. a script that adds the State object “Louisiana” to the database hbtn_0e_6_usa
 12. a script that changes the name of a State object from the database hbtn_0e_6_usa
 13. Delete states
+14. Cities in state
