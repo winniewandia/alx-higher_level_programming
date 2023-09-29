@@ -6,12 +6,9 @@ import requests
 import sys
 
 if __name__ == "__main__":
-    params = {"q": ""}
-    try:
-        params["q"] = sys.argv[1]
-    except:
-        pass
-    r = requests.post('http://0.0.0.0:5000/search_user', params)
+    letter = sys.argv[1] if len(sys.argv) > 1 else ""
+    params = {"q": letter}
+    r = requests.post('http://0.0.0.0:5000/search_user', data=params)
     try:
         json_response = r.json()
         if not json_response:
