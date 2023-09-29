@@ -7,10 +7,7 @@ import requests
 import sys
 
 if __name__ == '__main__':
-    try:
-        values = {'email': sys.argv[2]}
-        response = requests.post(sys.argv[1], data=values)
-        body = response.text
-        print(body)
-    except:
-        pass
+    values = {'email': sys.argv[2]}
+    response = requests.post(sys.argv[1], data=values)
+    body = response.text
+    print(body)

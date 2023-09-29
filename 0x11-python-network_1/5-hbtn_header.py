@@ -6,9 +6,6 @@ import requests
 import sys
 
 if __name__ == '__main__':
-    try:
-        response = requests.get(sys.argv[1])
-        body = response.headers['X-Request-Id']
-        print(body)
-    except:
-        pass
+    response = requests.get(sys.argv[1])
+    body = response.headers['X-Request-Id']
+    print(body)
