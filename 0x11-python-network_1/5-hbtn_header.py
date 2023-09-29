@@ -7,5 +7,6 @@ import sys
 
 if __name__ == '__main__':
     response = requests.get(sys.argv[1])
-    body = response.headers['X-Request-Id']
-    print(body)
+    if response.status_code == 200:
+        body = response.headers['X-Request-Id']
+        print(body)
