@@ -7,7 +7,10 @@ import sys
 
 if __name__ == "__main__":
     params = {"q": ""}
-    params["q"] = sys.argv[1]
+    try:
+        params["q"] = sys.argv[1]
+    except:
+        pass
     r = requests.post('http://0.0.0.0:5000/search_user', params)
     try:
         json_response = r.json()
