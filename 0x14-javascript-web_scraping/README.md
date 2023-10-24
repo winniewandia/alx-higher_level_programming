@@ -5,3 +5,4 @@
 4. a script that prints the number of movies where the character “Wedge Antilles” is present.
 5. a script that gets the contents of a webpage and stores it in a file.
 6. a script that computes the number of tasks completed by user id.
+7. a script that prints all characters of a Star Wars movie
