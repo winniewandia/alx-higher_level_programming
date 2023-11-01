@@ -10,3 +10,4 @@
 9. JavaScript script that fetches from https://hellosalut.stefanbohacek.dev/?lang=fr and displays the value of hello from that fetch in the HTML tag DIV#hello
 10. JavaScript script that updates the text color of the <header> element to red (#FF0000
 11. JavaScript script that adds, removes and clears LI elements from a list when the user clicks
+12. JavaScript script that fetches and prints how to say “Hello” depending on the language
